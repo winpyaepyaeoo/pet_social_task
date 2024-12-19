@@ -15,7 +15,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late GetPostsCubit getPostsCubit;
   final ScrollController _scrollController = ScrollController();
-  int pageLimit = 0;
 
   @override
   void initState() {
@@ -31,11 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // @override
-  // void dispose() {
-  //   _scrollController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
